@@ -366,18 +366,27 @@ footer {
 
 .tiktok-wrapper {
     display: flex;
-    justify-content: center;
-    min-height: 500px; /* Memberi ruang agar script bisa render video */
-    margin: 20px auto;
+    justify-content: center; /* Video di tengah */
+    align-items: center;
+    margin: 40px auto;
+    min-height: 750px; /* Booking space agar layout tidak kaku saat loading */
 }
 
-/* Memastikan iframe TikTok tidak meluber */
+/* Memperhalus tampilan embed TikTok */
 .tiktok-embed {
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    border: 1px solid rgba(197, 160, 89, 0.2) !important;
+    overflow: hidden;
     margin: 0 auto !important;
-    border: none !important;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
+/* Penyesuaian untuk layar HP kecil */
+@media (max-width: 480px) {
+    .tiktok-wrapper {
+        min-height: 600px;
+    }
+}
 
 /* Google Reviews Section */
 .google-reviews { padding: 60px 0; background: #111; }
