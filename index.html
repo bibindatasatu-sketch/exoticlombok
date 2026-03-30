@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exotic Lombok Island | Premium Travel Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="container">
+        <a href="#" class="logo">EXOTIC<span>LOMBOK</span></a>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li class="lang-switch">
+                    <span id="lang-id" class="active">ID</span> | 
+                    <span id="lang-en">EN</span>
+                </li>
+            </ul>
+            <a href="#booking" class="btn-nav">Book Now</a>
+        </div>
+    </div>
+</nav>
+
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <h1>Explore Lombok with <br><span class="gold-text">Exotic Lombok Island</span></h1>
+            <p>Premium Trip Experience with Trusted Local Guide</p>
+            <a href="#booking" class="btn-primary">Booking Sekarang</a>
+        </div>
+    </section>
+
+    <section class="packages" id="packages">
+        <div class="container">
+            <h2 class="section-title">Exclusive Travel Packages</h2>
+            <div class="package-grid">
+                <div class="package-card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1570789210967-2cac24afeb00?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="card-body">
+                        <h3>Lombok 3D2N</h3>
+                        <p>Jelajahi keindahan sirkuit Mandalika hingga Bukit Merese dalam 3 hari.</p>
+                        <button class="btn-select" onclick="selectPackage('Lombok 3D2N')">Pilih Paket</button>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="card-body">
+                        <h3>Gili Island Tour</h3>
+                        <p>Snorkeling di 3 Gili legendaris dengan private boat dan kru profesional.</p>
+                        <button class="btn-select" onclick="selectPackage('Gili Island Tour')">Pilih Paket</button>
+                    </div>
+                </div>
+                <div class="package-card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="card-body">
+                        <h3>Private Trip</h3>
+                        <p>Custom itinerary sesuai keinginan Anda untuk momen yang tak terlupakan.</p>
+                        <button class="btn-select" onclick="selectPackage('Private Trip')">Pilih Paket</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trust-section">
+        <div class="container">
+            <h3>Sudah dipercaya ratusan traveler</h3>
+            <div class="trust-grid">
+                <div class="trust-item"><span>✔</span> Berangkat setiap hari</div>
+                <div class="trust-item"><span>✔</span> Harga transparan</div>
+                <div class="trust-item"><span>✔</span> Guide profesional</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking" id="booking">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="booking-info">
+                    <h2>Ready for your next adventure?</h2>
+                    <p>Silakan isi formulir di samping. Tim kami akan segera menghubungi Anda untuk konfirmasi detail perjalanan.</p>
+                </div>
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-group">
+                        <label>Nama Lengkap</label>
+                        <input type="text" id="nama" placeholder="Contoh: Budi Santoso" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Nomor WhatsApp</label>
+                        <input type="number" id="whatsapp" placeholder="Contoh: 08123456789" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Pilihan Paket</label>
+                            <select id="paket" required>
+                                <option value="">Pilih Paket...</option>
+                                <option value="Lombok 3D2N">Lombok 3D2N</option>
+                                <option value="Gili Island Tour">Gili Island Tour</option>
+                                <option value="Private Trip">Private Trip</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tanggal Keberangkatan</label>
+                            <input type="date" id="tanggal" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Jumlah Orang</label>
+                            <input type="number" id="orang" placeholder="Pax" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Pilihan Hotel</label>
+                            <select id="hotel">
+                                <option value="Standard">Standard</option>
+                                <option value="Deluxe">Deluxe</option>
+                                <option value="Luxury">Luxury</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Transportasi</label>
+                        <select id="transport">
+                            <option value="Include">Termasuk (Mobil + Driver)</option>
+                            <option value="Tidak">Tidak Termasuk</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Request Tambahan</label>
+                        <textarea id="request" rows="3" placeholder="Contoh: Makanan vegetarian, jemput di Bandara..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Konfirmasi via WhatsApp</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<section class="testimonials" id="reviews">
+    <div class="container">
+        <h2 class="section-title">Apa Kata Mereka?</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Pelayanan luar biasa, mobil bersih, dan guide sangat ramah. Gili Trawangan jadi momen tak terlupakan!"</p>
+                <span class="client-name">- Sarah, Jakarta</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Booking-nya gampang banget, langsung sat-set via WA. Harga transparan tanpa biaya tersembunyi."</p>
+                <span class="client-name">- Andre, Surabaya</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="tiktok-section">
+    <div class="container">
+        <h2 class="section-title">Momen Seru Kami</h2>
+        
+        <div class="tiktok-wrapper">
+             <blockquote class="tiktok-embed" 
+                cite="https://www.tiktok.com/@exoticlombok_island/video/7422959588073147666" 
+                data-video-id="7422959588073147666" 
+                style="max-width: 325px; min-width: 325px;"> 
+                <section> 
+                    <a target="_blank" href="https://www.tiktok.com/@exoticlombok_island">@exoticlombok_island</a> 
+                </section> 
+            </blockquote>
+        </div>
+    </div>
+</section>
+
+<section class="google-reviews">
+    <div class="container">
+        <div class="review-header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_Reference_icon.svg" width="30" alt="Google">
+            <h3>Rating 4.9/5 di Google Maps</h3>
+        </div>
+        <div class="review-scroll">
+            <div class="review-item">
+                <strong>Budi Santoso</strong>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Sangat recommended! Pelayanan premium."</p>
+            </div>
+            <div class="review-item">
+                <strong>John Doe</strong>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Best tour agency in Lombok. Very professional guide."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="faq">
+    <div class="container">
+        <h2 class="section-title">Pertanyaan Sering Diajukan</h2>
+        <div class="faq-item">
+            <div class="faq-question">Apakah harga sudah termasuk tiket pesawat? <i class="fas fa-plus"></i></div>
+            <div class="faq-answer">Harga yang tertera adalah paket land tour di Lombok. Tiket pesawat bisa kami bantu pesan secara terpisah.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Kapan waktu terbaik ke Lombok? <i class="fas fa-plus"></i></div>
+            <div class="faq-answer">Mei hingga September adalah waktu terbaik untuk menikmati pantai yang cerah dan laut yang tenang.</div>
+        </div>
+    </div>
+</section>
+
+<a href="https://wa.me/6282335555442" class="floating-wa" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span>Tanya CS Kami</span>
+</a>
+
+
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Exotic Lombok Island. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

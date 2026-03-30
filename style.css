@@ -1,0 +1,459 @@
+/* General Setup */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-gold: #c5a059;
+    --dark-bg: #0a0a0a;
+    --dark-card: #141414;
+    --white: #ffffff;
+    --grey: #a0a0a0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--white);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.gold-text { color: var(--primary-gold); }
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(10, 10, 10, 0.9);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.logo span { color: var(--primary-gold); }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li { margin-left: 30px; }
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--primary-gold); }
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(10,10,10,1));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: var(--grey);
+}
+
+.btn-primary {
+    background: var(--primary-gold);
+    color: var(--dark-bg);
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #e0b86a;
+    transform: translateY(-3px);
+}
+
+/* Packages */
+.packages { padding: 100px 0; }
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.package-card {
+    background: var(--dark-card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.package-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary-gold);
+}
+
+.card-img {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-body { padding: 25px; }
+.card-body h3 { margin-bottom: 10px; font-size: 1.5rem; }
+.card-body p { color: var(--grey); font-size: 0.95rem; margin-bottom: 20px; }
+
+.btn-select {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    color: var(--primary-gold);
+    border: 1px solid var(--primary-gold);
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-select:hover {
+    background: var(--primary-gold);
+    color: var(--dark-bg);
+}
+
+/* Trust Section */
+.trust-section {
+    background: #111;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.trust-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.trust-item span { color: var(--primary-gold); margin-right: 8px; font-weight: bold; }
+
+/* Booking Form */
+.booking { padding: 100px 0; background: var(--dark-bg); }
+.booking-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+}
+
+.booking-form {
+    background: var(--dark-card);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+.form-group { margin-bottom: 20px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+label { display: block; margin-bottom: 8px; font-size: 0.85rem; color: var(--grey); }
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary-gold);
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background: var(--primary-gold);
+    color: var(--dark-bg);
+    border: none;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-submit:hover { background: #e0b86a; }
+
+/* Footer */
+footer {
+    padding: 40px 0;
+    border-top: 1px solid #222;
+    text-align: center;
+    color: var(--grey);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .booking-wrapper { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+    .trust-grid { flex-direction: column; gap: 15px; }
+}
+
+
+
+
+/* TambahanFloating WA Button */
+.floating-wa {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25d366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+    z-index: 9999;
+    transition: 0.3s;
+}
+.floating-wa:hover { transform: scale(1.1); }
+
+/* Testimonials */
+.testimonials { padding: 80px 0; background: #0f0f0f; }
+.testimonial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.testimonial-card {
+    background: var(--dark-card);
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 4px solid var(--primary-gold);
+}
+.stars { color: var(--primary-gold); margin-bottom: 15px; }
+.client-name { display: block; margin-top: 15px; font-weight: 600; color: var(--primary-gold); }
+
+/* FAQ Accordion */
+.faq { padding: 80px 0; }
+.faq-item {
+    background: var(--dark-card);
+    margin-bottom: 15px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.faq-question {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-out;
+    color: var(--grey);
+}
+.faq-item.active .faq-answer { padding: 0 20px 20px 20px; max-height: 200px; }
+.faq-item.active .fa-plus { transform: rotate(45deg); color: var(--primary-gold); }
+
+/* Reveal Animation */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s all ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+/* Language Switcher */
+.lang-switch {
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: var(--grey);
+}
+.lang-switch .active {
+    color: var(--primary-gold);
+    font-weight: bold;
+}
+
+/* TikTok Embed Grid */
+.tiktok-section { padding: 80px 0; background: #000; }
+.tiktok-grid {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 325px; /* Standar lebar video tiktok */
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.tiktok-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background: transparent;
+}
+
+/* Memperbaiki background putih lebar dari TikTok */
+.tiktok-embed {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-radius: 12px;
+    margin: 0 auto !important;
+}
+
+/* Google Reviews Section */
+.google-reviews { padding: 60px 0; background: #111; }
+.review-header { text-align: center; margin-bottom: 30px; }
+.review-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+.review-item {
+    min-width: 280px;
+    background: var(--dark-card);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Mobile Optimization (WAJIB) */
+@media (max-width: 480px) {
+    .hero h1 { font-size: 2.2rem; }
+    .btn-nav { display: none; } /* Sembunyikan tombol kecil di hp agar rapi */
+    .navbar .logo { font-size: 1.2rem; }
+    
+    /* Perbaikan form di mobile */
+    .booking-form { padding: 20px; }
+    .form-row { grid-template-columns: 1fr; }
+    
+    /* Agar scroll review mulus di hp */
+    .review-scroll {
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+}
+
+/* Tambahan Efek Hover Premium */
+.package-card .card-img {
+    transition: transform 0.5s ease;
+}
+.package-card:hover .card-img {
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+/* Container Utama */
+.phone-frame {
+    width: 320px; /* Lebar standar HP */
+    height: 650px;
+    margin: 0 auto;
+    border: 8px solid #333; /* Bingkai HP */
+    border-radius: 40px;
+    padding: 10px;
+    background: #000;
+    box-shadow: 0 20px 50px rgba(197, 160, 89, 0.2); /* Glow warna Gold */
+    overflow-y: auto; /* Agar bisa scroll di dalam frame jika video panjang */
+    scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
+}
+
+.phone-frame::-webkit-scrollbar {
+    display: none; /* Hilangkan scrollbar di Chrome/Safari */
+}
+
+.phone-screen {
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+/* Responsif untuk HP beneran */
+@media (max-width: 480px) {
+    .phone-frame {
+        width: 100%; /* Full width di HP user */
+        height: auto;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+    }
+}
