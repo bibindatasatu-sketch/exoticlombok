@@ -367,16 +367,17 @@ footer {
 .tiktok-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    background: transparent;
+    min-height: 500px; /* Memberi ruang agar script bisa render video */
+    margin: 20px auto;
 }
 
-/* Memperbaiki background putih lebar dari TikTok */
+/* Memastikan iframe TikTok tidak meluber */
 .tiktok-embed {
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    border-radius: 12px;
     margin: 0 auto !important;
+    border: none !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
+
 
 /* Google Reviews Section */
 .google-reviews { padding: 60px 0; background: #111; }
